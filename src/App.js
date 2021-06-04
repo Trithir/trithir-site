@@ -5,6 +5,10 @@ import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import ProTip from './ProTip';
 import Dashboard from './Components/dashboard//Dashboard';
+import BizzFuzz from './Components/BizzFuzz';
+import { Switch, Route, useHistory } from "react-router-dom";
+import Game from './Components/dashboard/TickToe';
+
 
 function Copyright() {
   return (
@@ -19,16 +23,44 @@ function Copyright() {
   );
 }
 
+// export default function App() {
+//   return (
+//     <div>
+//       <Box >
+//         <Typography variant="h4" component="h1" gutterBottom>
+//           <Dashboard />
+//         </Typography>
+//         <ProTip />
+//         <Copyright />
+//       </Box>
+//     </div>
+//   );
+// }
+
 export default function App() {
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
+    <div>
+      <Box >
         <Typography variant="h4" component="h1" gutterBottom>
-          <Dashboard />
+          <Dashboard
+            child={
+              <Switch>
+                <Route
+                  exact path={'/BizzFuzz'}
+                  component={BizzFuzz}
+                />
+                <Route
+                  exact path={'/TickToe'}
+                  component={Game}
+                />
+              </Switch>
+              }
+            >
+          </Dashboard>
         </Typography>
         <ProTip />
         <Copyright />
       </Box>
-    </Container>
+    </div>
   );
 }
