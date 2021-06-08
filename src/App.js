@@ -23,20 +23,6 @@ function Copyright() {
   );
 }
 
-// export default function App() {
-//   return (
-//     <div>
-//       <Box >
-//         <Typography variant="h4" component="h1" gutterBottom>
-//           <Dashboard />
-//         </Typography>
-//         <ProTip />
-//         <Copyright />
-//       </Box>
-//     </div>
-//   );
-// }
-
 export default function App() {
   return (
     <div>
