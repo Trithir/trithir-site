@@ -13,8 +13,10 @@
     "@emotion/styled": "latest",
     "@material-ui/core": "^v4.11.1 ",
     "@material-ui/icons": "^4.11.2",
+    "konva": "^8.0.4",
     "react": "latest",
     "react-dom": "latest",
+    "react-konva": "*",
     "react-router-dom": "^5.2.0",
     "react-scripts": "latest",
     "recharts": "^2.0.9"
