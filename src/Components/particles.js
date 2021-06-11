@@ -1,5 +1,9 @@
+import React, { Component } from 'react';
+
+class MyParticles extends Component {
+  render() {
 /*** requestAnimationFrame*/
- window.requestAnimationFrame = (function(){
+window.requestAnimationFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
           window.mozRequestAnimationFrame    ||
@@ -11,7 +15,7 @@
 })();
 
 /*** Vector*/
-function Vector(x, y) {
+ function Vector(x, y) {
   this.x = x || 0;
   this.y = y || 0;
 }
@@ -389,7 +393,7 @@ Particle.prototype = (function(o) {
 
   // GUI Control
   control = {
-      particleNum: 100
+      particleNum: 200
   };
 
   // Init
@@ -474,3 +478,7 @@ Particle.prototype = (function(o) {
   };
   loop();
 })();
+
+}}
+
+export default MyParticles;
