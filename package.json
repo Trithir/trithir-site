@@ -13,12 +13,18 @@
     "@emotion/styled": "latest",
     "@material-ui/core": "^v4.11.1 ",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "*",
+    "@material-ui/styles": "^4.11.4",
     "konva": "^8.0.4",
     "react": "latest",
     "react-dom": "latest",
     "react-konva": "*",
+    "react-particles-js": "^3.4.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "latest",
+    "react-tsparticles": "^1.28.0",
+    "react-typed": "^1.2.0",
+    "react-vertical-timeline-component": "^3.3.3",
     "recharts": "^2.0.9"
   },
   "browserslist": {

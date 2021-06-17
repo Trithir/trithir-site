@@ -3,9 +3,10 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-// import Typed from "react-typed";
+import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "./images/avatar.png";
+import TemporaryDrawer from './dashboard/NewDash';
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -38,21 +39,23 @@ const Header = () => {
       <Grid container justify="center">
         <Avatar className={classes.avatar} src={avatar} alt="Mahmudul Alam" />
       </Grid>
-      {/* <Typography className={classes.title} variant="h4">
-        <Typed strings={["Mahmudul Alam"]} typeSpeed={40} />
+      <Typography className={classes.title} variant="h4">
+        <Typed strings={["The Eric Stevens"]} typeSpeed={40} />
       </Typography>
       <Typography className={classes.subtitle} variant="h5">
         <Typed
           strings={[
             "Frontend Developer",
             "Backend Developer",
-            "Native App Developer",
+            "Music Player",
+            "Awesome Duder",
           ]}
           typeSpeed={40}
           backSpeed={50}
           loop
         />
-      </Typography> */}
+      </Typography>
+      <TemporaryDrawer />
     </Box>
   );
 };

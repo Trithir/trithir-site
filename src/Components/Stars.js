@@ -1,7 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { Stage, Layer, Star, Text } from 'react-konva';
-
 
 function generateShapes() {
   return [...Array(50)].map((_, i) => ({
@@ -52,8 +50,8 @@ export default function Stars() {
             x={star.x}
             y={star.y}
             numPoints={5}
-            innerRadius={20}
-            outerRadius={40}
+            innerRadius={10}
+            outerRadius={20}
             fill="#89b717"
             opacity={0.8}
             draggable

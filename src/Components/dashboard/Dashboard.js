@@ -17,8 +17,6 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { MainListItems, secondaryListItems } from './listItems';
-import { render } from 'react-dom';
-import { Stage, Layer, Star, Text } from 'react-konva';
 
 function Copyright() {
   return (
@@ -46,7 +44,6 @@ export default function Dashboard(props) {
 
   return (
     <div className={classes.root}>
-      <Stage width={window.innerWidth} height={window.innerHeight}>
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
@@ -97,7 +94,6 @@ export default function Dashboard(props) {
           </Box>
         </Container>
       </main>
-      </Stage>
     </div>
   );
 }
