@@ -14,12 +14,16 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import CustomizedTimeline from '../MTimeline';
 import Typography from '@material-ui/core/Typography';
 import FancyTimeline from '../OTimeline';
+import ProjectCards from '../ProjectCards';
 
 const useStyles = makeStyles({
   bg: {
     backgroundColor: "#1a1126",
     overflow: 'auto',
     scrollbarColor: 'transparent transparent',
+  },
+  about:{
+    width: '300'
   },
   list: {
     width: 530,
@@ -38,6 +42,8 @@ export default function TemporaryDrawer() {
     right: false,
   });
 
+
+
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -55,8 +61,9 @@ export default function TemporaryDrawer() {
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
-      >
-        <Typography>
+      > 
+        {state.top ? 
+        <Typography className={classes.about}>
             Hello there! As far back as my memory goes, I've been curious about how things worked, and interested in fixing or improving upon them.
           Growing up I built/disassembled/fixed anything and everything, limited only by a lack of finances or resources. By the time I 
           finished high school I had my eyes set on the automotive field. Off and on for the next 10 years I worked towards being a technician,
@@ -64,43 +71,45 @@ export default function TemporaryDrawer() {
           my lust for fixing and problem solving (I never stopped building things), and opened me to a new line of work that has been challenging
           and fulfilling. 
         </Typography>
-        {/* <FancyTimeline /> */}
-        {/* <CustomizedTimeline /> */}
-        {/* <List>
-          {['About', 'Schooling', 'Work', 'Etc'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
+        : ''
+        } 
+        {state.left ?
+        <FancyTimeline />
+        : ''
+        }
+        {state.right ?
+        <CustomizedTimeline />
+        : ''
+        }
+        {state.bottom ? 
+        <ProjectCards /> 
+        : ''
+        }
+
       </div>
     </div>
   );
 
   return (
     <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button color='primary' onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          {console.log(state[anchor], anchor)}
-          {/* <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
-          </Drawer> */}
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)} BackdropProps={{ invisible: true }}>
-            {list(anchor)}  
+        <React.Fragment key='left'>
+          <Button color='primary' onClick={toggleDrawer('left', true)}>Timeline</Button>
+          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }}>
+            {list('left')}  
+          </Drawer>
+          <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
+          <Drawer anchor='right' open={state['right']} onClose={toggleDrawer('right', false)} BackdropProps={{ invisible: true }}>
+            {list('right')}  
+          </Drawer>
+          <Button color='primary' onClick={toggleDrawer('top', true)}>About Me</Button>
+          <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }}>
+            {list('top')}  
+          </Drawer>
+          <Button color='primary' onClick={toggleDrawer('bottom', true)}>Projects</Button>
+          <Drawer anchor='bottom' open={state['bottom']} onClose={toggleDrawer('bottom', false)} BackdropProps={{ invisible: true }}>
+            {list('bottom')}  
           </Drawer>
         </React.Fragment>
-      ))}
     </div> 
   );
 }

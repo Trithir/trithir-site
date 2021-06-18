@@ -47,7 +47,7 @@
         }
       },
       "onClick": {
-        "enable": true,
+        "enable": false,
         "mode": "absorber"
       },
       "onDiv": {

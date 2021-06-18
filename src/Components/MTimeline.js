@@ -18,10 +18,10 @@ export default function CustomizedTimeline() {
   const classes = useStyles();
 
   return (
-    <Timeline align="alternate">
+    <Timeline align="alternate" className={classes.root}>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" >
             9:30 am
           </Typography>
         </TimelineOppositeContent>
@@ -42,7 +42,7 @@ export default function CustomizedTimeline() {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent>
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2">
             10:00 am
           </Typography>
         </TimelineOppositeContent>
@@ -102,5 +102,12 @@ const useStyles = makeStyles((theme) => ({
   },
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
+  },
+  root: {
+    "& .MuiPaper-root": {
+      borderRadius: "100px",
+      boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75);",
+      color: 'rgba(232, 116, 14, 0.87)',
+    }
   },
 }));

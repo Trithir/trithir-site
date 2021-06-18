@@ -10,19 +10,6 @@ import Game from './Components/dashboard/TickToe';
 import Home from './Components/Home';
 import CssBaseline from "@material-ui/core/CssBaseline";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 export default function App() {
   return (
     <>
@@ -32,7 +19,6 @@ export default function App() {
         <Route exact path={'/BizzFuzz'} component={BizzFuzz} />
         <Route exact path={'/TickToe'} component={Game} />
       </Switch>
-      <Copyright />
     </>
   );
 }
