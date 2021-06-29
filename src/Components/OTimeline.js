@@ -38,7 +38,7 @@ return (
 
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2013 - 2020"
+    date="2015 - 2020"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
   >
@@ -47,7 +47,7 @@ return (
     <p>
       Helped create methods that improved output, reduced mistakes, as well as engineering 
       products to save space. Custom CNC work as well as electronics assembly, diagnostics, 
-      and repairs. 
+      and repairs. Field diagnostic and repairs of hot tubs and spas.
     </p>
   </VerticalTimelineElement>
   <VerticalTimelineElement

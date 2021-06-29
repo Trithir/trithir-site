@@ -24,7 +24,7 @@ export default function ProjectCards() {
   };
 
   return (
-    <Grid container  maxWidth='md'>
+    <Grid container>
       <Grid item xs={2} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader
@@ -43,7 +43,7 @@ export default function ProjectCards() {
           />
           <CardMedia
             className={classes.media}
-            src="/SuitCaseDrums.jpg"
+            image="/images/SuitCaseDrums.jpg"
             title="Suitcase Drums"
           />
           <CardContent>
@@ -90,7 +90,7 @@ export default function ProjectCards() {
           />
           <CardMedia
             className={classes.media}
-            src="/SuitCaseDrums.jpg"
+            image="/images/SuitCaseDrums.jpg"
             title="Activity map"
           />
           <CardContent>

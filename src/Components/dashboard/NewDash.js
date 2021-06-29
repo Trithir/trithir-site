@@ -16,23 +16,6 @@ import Typography from '@material-ui/core/Typography';
 import FancyTimeline from '../OTimeline';
 import ProjectCards from '../ProjectCards';
 
-const useStyles = makeStyles({
-  bg: {
-    backgroundColor: "#1a1126",
-    overflow: 'auto',
-    scrollbarColor: 'transparent transparent',
-  },
-  about:{
-    width: '300'
-  },
-  list: {
-    width: 530,
-  },
-  fullList: {
-    width: 'auto',
-  },
-});
-
 export default function TemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -41,8 +24,6 @@ export default function TemporaryDrawer() {
     bottom: false,
     right: false,
   });
-
-
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -63,7 +44,7 @@ export default function TemporaryDrawer() {
         onKeyDown={toggleDrawer(anchor, false)}
       > 
         {state.top ? 
-        <Typography className={classes.about}>
+        <Typography >
             Hello there! As far back as my memory goes, I've been curious about how things worked, and interested in fixing or improving upon them.
           Growing up I built/disassembled/fixed anything and everything, limited only by a lack of finances or resources. By the time I 
           finished high school I had my eyes set on the automotive field. Off and on for the next 10 years I worked towards being a technician,
@@ -97,10 +78,10 @@ export default function TemporaryDrawer() {
           <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }}>
             {list('left')}  
           </Drawer>
-          <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
+          {/* <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
           <Drawer anchor='right' open={state['right']} onClose={toggleDrawer('right', false)} BackdropProps={{ invisible: true }}>
             {list('right')}  
-          </Drawer>
+          </Drawer> */}
           <Button color='primary' onClick={toggleDrawer('top', true)}>About Me</Button>
           <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }}>
             {list('top')}  
@@ -126,22 +107,24 @@ const theme = createMuiTheme({
         color: 'white',
       },
     },
-  }
+  },
 });
 
-  //  {if (state[anchor] === true) {{
-  //   switch (anchor){{
-  //     case 'left': 
-  //       <button>Left</button>
-  //       break;
-  //     case 'right':
-  //       <button>Right</button>
-  //       break;
-  //     case 'top':
-  //       <button>Top</button>
-  //       break;
-  //     case 'bottom':
-  //       <button>Bottom</button>
-  //       break;
-  //   }}
-  // }}}
+const useStyles = makeStyles({
+  bg: {
+    backgroundColor: "#1a1126",
+    overflow: 'auto',
+    scrollbarColor: 'transparent transparent',
+  },
+  about:{
+    // width: '50%',
+    // color: (251, 100, 41, 0.87)
+  },
+  list: {
+    width: 530,
+    color: '#E57C12',
+  },
+  fullList: {
+    width: '100%',
+  },
+});
