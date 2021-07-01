@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 function BizzFuzz() {
   const [answer, setAnswer] = React.useState('')
@@ -29,7 +30,7 @@ function BizzFuzz() {
   }  
   
   return (
-    <React.Fragment>
+    <>
       <TextField
         label="BizzFuzz"
         id="outlined-size-small"
@@ -38,8 +39,10 @@ function BizzFuzz() {
         onChange={onBizzFuzzChange}
         onKeyUp={handleKeyUp}
       />
-      {result}
-    </React.Fragment>
+      <Typography > 
+        {result}
+      </Typography>
+    </>
     )
 }
 

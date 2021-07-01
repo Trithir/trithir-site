@@ -3,13 +3,6 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import { createMuiTheme } from '@material-ui/core/styles';
 import CustomizedTimeline from '../MTimeline';
 import Typography from '@material-ui/core/Typography';
@@ -26,8 +19,8 @@ export default function TemporaryDrawer() {
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
+  if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    return;
     }
     setState({ ...state, [anchor]: open });
   };
@@ -37,21 +30,24 @@ export default function TemporaryDrawer() {
     >
       <div
         className={clsx(classes.list, {
-          [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+          [classes.topList]: anchor === 'top',
+          [classes.bottomList]: anchor === 'bottom',
         })}
         role="presentation"
-        onClick={toggleDrawer(anchor, false)}
-        onKeyDown={toggleDrawer(anchor, false)}
+        // onClick={toggleDrawer(anchor, false)}
+        // onKeyDown={toggleDrawer(anchor, false)}
       > 
         {state.top ? 
-        <Typography >
+        <>
+        <Typography className={classes.about}>
             Hello there! As far back as my memory goes, I've been curious about how things worked, and interested in fixing or improving upon them.
           Growing up I built/disassembled/fixed anything and everything, limited only by a lack of finances or resources. By the time I 
           finished high school I had my eyes set on the automotive field. Off and on for the next 10 years I worked towards being a technician,
-          but discovered it wasn't what I wanted. Working through a second round of college, I took some programming classes that re-ignited
-          my lust for fixing and problem solving (I never stopped building things), and opened me to a new line of work that has been challenging
-          and fulfilling. 
+          but discovered it wasn't what I wanted. Making my way through a second round of college, I took some programming classes that re-ignited
+          my lust for fixing and problem solving (I never really stopped building things), and opened me to a new line of work that has been challenging
+          and fulfilling. I enjoy pushing my boundaries and trying things outside of ordinary. 
         </Typography>
+        </>
         : ''
         } 
         {state.left ?
@@ -117,14 +113,22 @@ const useStyles = makeStyles({
     scrollbarColor: 'transparent transparent',
   },
   about:{
-    // width: '50%',
+    display: 'flex',
+    width: '50%',
     // color: (251, 100, 41, 0.87)
   },
   list: {
     width: 530,
     color: '#E57C12',
   },
-  fullList: {
+  topList: {
+    display:'flex',
+    justifyContent: 'center',
+    textAlign:'center',
     width: '100%',
   },
+  bottomList: {
+    width: '100%',
+  },
+
 });

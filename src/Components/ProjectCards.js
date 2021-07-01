@@ -14,6 +14,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
 import TickToe from './dashboard/TickToe'
+import BizzFuzz from './BizzFuzz';
+import SuitCaseDrums from './images/SuitCaseDrums.jpg'
 
 export default function ProjectCards() {
   const classes = useStyles();
@@ -43,7 +45,7 @@ export default function ProjectCards() {
           />
           <CardMedia
             className={classes.media}
-            image="/images/SuitCaseDrums.jpg"
+            image={SuitCaseDrums}
             title="Suitcase Drums"
           />
           <CardContent>
@@ -90,7 +92,7 @@ export default function ProjectCards() {
           />
           <CardMedia
             className={classes.media}
-            image="/images/SuitCaseDrums.jpg"
+            image="map"
             title="Activity map"
           />
           <CardContent>
@@ -132,6 +134,22 @@ export default function ProjectCards() {
           />
           <CardContent>
             <TickToe />
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={2} className={classes.cardGrid}>    
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                B
+              </Avatar>
+            }
+            title="BizzFuzz"
+            subheader="May 2021"
+          />
+          <CardContent>
+            <BizzFuzz />
           </CardContent>
         </Card>
       </Grid>
