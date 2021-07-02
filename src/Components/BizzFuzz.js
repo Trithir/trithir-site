@@ -24,7 +24,7 @@ function BizzFuzz() {
           stuff.push(i);
         }
       }
-      setResult(stuff)
+      setResult(stuff.join(', '))
       setAnswer('')
     }
   }  

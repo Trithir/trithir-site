@@ -16,6 +16,8 @@ import Grid from '@material-ui/core/Grid';
 import TickToe from './dashboard/TickToe'
 import BizzFuzz from './BizzFuzz';
 import SuitCaseDrums from './images/SuitCaseDrums.jpg'
+import Nexus from './images/Nexus.png'
+import TrithirBot from './images/TrithirBot.png'
 
 export default function ProjectCards() {
   const classes = useStyles();
@@ -27,6 +29,120 @@ export default function ProjectCards() {
 
   return (
     <Grid container>
+      <Grid item xs={2} className={classes.cardGrid}>
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                C
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="CodeSpells"
+            subheader="March 2021"
+          />
+          <CardMedia
+            className={classes.media}
+            image={Nexus}
+            title="CodeSpells"
+          />
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Internship that turned into a full time position. Integral team member in creating
+              the Nexus web server, where mages can create and share spells that render in a 3D world!
+            </Typography>
+          </CardContent>
+          {/* <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+            <IconButton
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </CardActions> */}
+        </Card>
+      </Grid>
+      {/* <Grid item xs={2} className={classes.cardGrid}>    
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                A
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="Activity Map"
+            subheader="May 2021"
+          />
+          <CardMedia
+            className={classes.media}
+            image="map"
+            title="Activity map"
+          />
+          <CardContent>
+            <Typography variant="body2" color="textSecondary" component="p">
+              An app to log hiking and other outdoor activities. Sort your activities by length,
+              duration, frequency of visits, and more!
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid> */}
+      <Grid item xs={2} className={classes.cardGrid}>    
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                T
+              </Avatar>
+            }
+            title="Tic Tac Toe"
+            subheader="May 2021"
+          />
+          <CardContent>
+            <TickToe />
+            <Typography variant="body2" color="textSecondary" component="p">
+              React game of Tic Tac Toe. Records the steps so you can see where things went wrong!
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item xs={2} className={classes.cardGrid}>    
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                B
+              </Avatar>
+            }
+            title="BizzFuzz"
+            subheader="May 2021"
+          />
+          <CardContent>
+            <BizzFuzz />
+            <Typography variant="body2" color="textSecondary" component="p">
+              Had some fun altering a "Hello world" setup of Bizz Fuzz to use some React-y stuff. 
+            </Typography>
+          </CardContent>
+        </Card>
+      </Grid>
       <Grid item xs={2} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader
@@ -74,12 +190,12 @@ export default function ProjectCards() {
           </CardActions> */}
         </Card>
       </Grid>
-      <Grid item xs={2} className={classes.cardGrid}>    
+      <Grid item xs={2} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader
             avatar={
               <Avatar aria-label="recipe" className={classes.avatar}>
-                A
+                T-B
               </Avatar>
             }
             action={
@@ -87,18 +203,20 @@ export default function ProjectCards() {
                 <MoreVertIcon />
               </IconButton>
             }
-            title="Activity Map"
-            subheader="May 2021"
+            title="Trithir Bot"
+            subheader="April 2021"
           />
           <CardMedia
             className={classes.media}
-            image="map"
-            title="Activity map"
+            image={TrithirBot}
+            title="TrithirBot"
           />
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
-              An app to log hiking and other outdoor activities. Sort your activities by length,
-              duration, frequency of visits, and more!
+              Trithir-bot is built on an existing basic request bot. Users
+              have the ability to add songs to a streamer's playlist using simple commands. 
+              Expanded the search function. Added a counter for dropped
+              drumsticks.    
             </Typography>
           </CardContent>
           {/* <CardActions disableSpacing>
@@ -121,38 +239,7 @@ export default function ProjectCards() {
           </CardActions> */}
         </Card>
       </Grid>
-      <Grid item xs={2} className={classes.cardGrid}>    
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                T
-              </Avatar>
-            }
-            title="Tic Tac Toe"
-            subheader="May 2021"
-          />
-          <CardContent>
-            <TickToe />
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item xs={2} className={classes.cardGrid}>    
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                B
-              </Avatar>
-            }
-            title="BizzFuzz"
-            subheader="May 2021"
-          />
-          <CardContent>
-            <BizzFuzz />
-          </CardContent>
-        </Card>
-      </Grid>
+
     </Grid>
   );
 }

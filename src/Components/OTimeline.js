@@ -18,7 +18,8 @@ return (
     <h3 className="vertical-timeline-element-title">Software Developer</h3>
     <h4 className="vertical-timeline-element-subtitle">San Deigo, Ca</h4>
     <p>
-      Full stack development with a focus on frontend.
+      Full stack development. Helped in developing a server for users to share
+      spells they develop for an interactive online game.
     </p>
   </VerticalTimelineElement>
 
