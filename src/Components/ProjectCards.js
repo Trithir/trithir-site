@@ -33,7 +33,7 @@ export default function ProjectCards() {
         <Card className={classes.root}>
           <CardHeader
             avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
+              <Avatar aria-label="Codespells Nexus" className={classes.avatar}>
                 C
               </Avatar>
             }
@@ -109,16 +109,17 @@ export default function ProjectCards() {
         <Card className={classes.root}>
           <CardHeader
             avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
+              <Avatar aria-label="Tic Toe" className={classes.avatar}>
                 T
               </Avatar>
             }
             title="Tic Tac Toe"
             subheader="May 2021"
+            subheaderColor="#E57C12"
           />
           <CardContent>
             <TickToe />
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               React game of Tic Tac Toe. Records the steps so you can see where things went wrong!
             </Typography>
           </CardContent>
@@ -137,7 +138,7 @@ export default function ProjectCards() {
           />
           <CardContent>
             <BizzFuzz />
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               Had some fun altering a "Hello world" setup of Bizz Fuzz to use some React-y stuff. 
             </Typography>
           </CardContent>
@@ -165,7 +166,7 @@ export default function ProjectCards() {
             title="Suitcase Drums"
           />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               I took a youth drumset and built it into a suitcase. For music on the go, 
               don't forget your SuitCaseDrumset!
             </Typography>
@@ -212,7 +213,7 @@ export default function ProjectCards() {
             title="TrithirBot"
           />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               Trithir-bot is built on an existing basic request bot. Users
               have the ability to add songs to a streamer's playlist using simple commands. 
               Expanded the search function. Added a counter for dropped
@@ -247,7 +248,8 @@ export default function ProjectCards() {
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
-    backgroundColor: '#1a1126',
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+    color: '#e57c12',
   },
   media: {
     height: 0,

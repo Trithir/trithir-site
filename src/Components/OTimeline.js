@@ -11,6 +11,7 @@ return (
 <VerticalTimeline>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2021 - present"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -25,6 +26,7 @@ return (
 
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2020-2021"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -39,6 +41,7 @@ return (
 
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2016 - 2019"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     icon={<SchoolIcon />}
@@ -51,6 +54,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2015 - 2020"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -65,6 +69,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2013 - 2015"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -77,6 +82,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2012 - 2013"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -89,6 +95,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2010-2012"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -101,6 +108,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2008-2011"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -113,6 +121,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2007-2008"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -125,6 +134,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2006-2007"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -137,6 +147,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2005 - 2007"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     icon={<SchoolIcon />}
@@ -149,6 +160,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2005 - 2006"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
@@ -161,6 +173,7 @@ return (
   </VerticalTimelineElement>
   <VerticalTimelineElement
     className="vertical-timeline-element--education"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="2001 - 2005"
     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
     icon={<SchoolIcon />}
