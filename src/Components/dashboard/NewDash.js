@@ -71,7 +71,7 @@ export default function TemporaryDrawer() {
     <div>
         <React.Fragment key='left'>
           <Button color='primary' onClick={toggleDrawer('left', true)}>Timeline</Button>
-          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }}>
+          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}} >
             {list('left')}  
           </Drawer>
           {/* <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
@@ -79,11 +79,11 @@ export default function TemporaryDrawer() {
             {list('right')}  
           </Drawer> */}
           <Button color='primary' onClick={toggleDrawer('top', true)}>About Me</Button>
-          <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }}>
+          <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('top')}  
           </Drawer>
           <Button color='primary' onClick={toggleDrawer('bottom', true)}>Projects</Button>
-          <Drawer anchor='bottom' open={state['bottom']} onClose={toggleDrawer('bottom', false)} BackdropProps={{ invisible: true }}>
+          <Drawer anchor='bottom' open={state['bottom']} onClose={toggleDrawer('bottom', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('bottom')}  
           </Drawer>
         </React.Fragment>
@@ -108,7 +108,7 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   bg: {
-    backgroundColor: "#1a1126",
+    // backgroundColor: "#1a1126",
     overflow: 'auto',
     scrollbarColor: 'transparent transparent',
   },
@@ -118,7 +118,7 @@ const useStyles = makeStyles({
     // color: (251, 100, 41, 0.87)
   },
   list: {
-    width: 530,
+    width: 850,
     color: '#E57C12',
   },
   topList: {

@@ -51,7 +51,7 @@ export default function ProjectCards() {
             title="CodeSpells"
           />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" component="p">
               Internship that turned into a full time position. Integral team member in creating
               the Nexus web server, where mages can create and share spells that render in a 3D world!
             </Typography>
@@ -247,6 +247,7 @@ export default function ProjectCards() {
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    backgroundColor: '#1a1126',
   },
   media: {
     height: 0,
