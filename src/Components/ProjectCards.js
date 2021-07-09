@@ -18,6 +18,7 @@ import BizzFuzz from './BizzFuzz';
 import SuitCaseDrums from './images/SuitCaseDrums.jpg'
 import Nexus from './images/Nexus.png'
 import TrithirBot from './images/TrithirBot.png'
+import { CardActionArea } from '@material-ui/core';
 
 export default function ProjectCards() {
   const classes = useStyles();
@@ -45,11 +46,13 @@ export default function ProjectCards() {
             title="CodeSpells"
             subheader="March 2021"
           />
-          <CardMedia
-            className={classes.media}
-            image={Nexus}
-            title="CodeSpells"
-          />
+          <CardActionArea href='http://nexus.codespells.org'>
+            <CardMedia
+              className={classes.media}
+              image={Nexus}
+              title="CodeSpells"
+            />
+          </CardActionArea>
           <CardContent>
             <Typography variant="body2" component="p">
               Internship that turned into a full time position. Integral team member in creating
@@ -207,11 +210,13 @@ export default function ProjectCards() {
             title="Trithir Bot"
             subheader="April 2021"
           />
-          <CardMedia
-            className={classes.media}
-            image={TrithirBot}
-            title="TrithirBot"
-          />
+          <CardActionArea href='https://github.com/Trithir/TrithirBot'>
+            <CardMedia
+              className={classes.media}
+              image={TrithirBot}
+              title="TrithirBot"
+            />
+          </CardActionArea>
           <CardContent>
             <Typography variant="body2" component="p">
               Trithir-bot is built on an existing basic request bot. Users

@@ -71,7 +71,7 @@ export default function TemporaryDrawer() {
     <div>
         <React.Fragment key='left'>
           <Button color='primary' onClick={toggleDrawer('left', true)}>Timeline</Button>
-          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}} >
+          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} overflow='hidden' BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}} >
             {list('left')}  
           </Drawer>
           {/* <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
