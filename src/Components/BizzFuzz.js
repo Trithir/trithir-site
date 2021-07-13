@@ -1,11 +1,34 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 function BizzFuzz() {
   const [answer, setAnswer] = React.useState('')
   const [result, setResult] = React.useState('')
   const stuff = [] 
+
+  // const CssTextField = withStyles({
+  //   root: {
+  //     '& label.Mui-focused': {
+  //       color: '#E57C12',
+  //     },
+  //     '& .MuiInput-underline:after': {
+  //       borderBottomColor: 'yellow',
+  //     },
+  //     '& .MuiOutlinedInput-root': {
+  //       '& fieldset': {
+  //         borderColor: '#E57C12',
+  //       },
+  //       '&:hover fieldset': {
+  //         borderColor: 'white',
+  //       },
+  //       '&.Mui-focused fieldset': {
+  //         borderColor: '#E57C12',
+  //       },
+  //     },
+  //   },
+  // })(TextField);
 
   function onBizzFuzzChange(event) {
     setAnswer(event.target.value)
