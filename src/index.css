@@ -83,3 +83,16 @@ canvas {
   font-size: 13px;
   background-color: rgba(0, 0, 0, .5);
 }
+
+.bg::-webkit-scrollbar {
+  display: none;
+}
+
+.bg {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.MuiCardHeader-subheader 	{
+  color:#E57C12 !important;
+}

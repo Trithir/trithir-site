@@ -29,8 +29,8 @@ export default function ProjectCards() {
   };
 
   return (
-    <Grid container>
-      <Grid item xs={2} className={classes.cardGrid}>
+    <Grid container direction='column'>
+      <Grid item xs={12} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader
             avatar={
@@ -56,7 +56,58 @@ export default function ProjectCards() {
           <CardContent>
             <Typography variant="body2" component="p">
               Internship that turned into a full time position. Integral team member in creating
-              the Nexus web server, where mages can create and share spells that render in a 3D world!
+              the Nexus. A react based web server, where mages can create and share spells that render in a 3D world!
+            </Typography>
+          </CardContent>
+          {/* <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+            <IconButton
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </CardActions> */}
+        </Card>
+      </Grid>
+      <Grid item xs={12} className={classes.cardGrid}>
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                T-B
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="Trithir Bot"
+            subheader="April 2021"
+          />
+          <CardActionArea href='https://github.com/Trithir/TrithirBot'>
+            <CardMedia
+              className={classes.media}
+              image={TrithirBot}
+              title="TrithirBot"
+            />
+          </CardActionArea>
+          <CardContent>
+            <Typography variant="body2" component="p">
+              Trithir Bot is built on an existing Twitch request bot written in TypeScript. Users
+              have the ability to add songs to a streamer's playlist using simple commands. 
+              Expanded the search function. Added a counter for dropped
+              drumsticks.    
             </Typography>
           </CardContent>
           {/* <CardActions disableSpacing>
@@ -108,7 +159,7 @@ export default function ProjectCards() {
           </CardContent>
         </Card>
       </Grid> */}
-      <Grid item xs={2} className={classes.cardGrid}>    
+      <Grid item xs={12} className={classes.cardGrid}>    
         <Card className={classes.root}>
           <CardHeader
             avatar={
@@ -128,7 +179,7 @@ export default function ProjectCards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={2} className={classes.cardGrid}>    
+      <Grid item xs={12} className={classes.cardGrid}>    
         <Card className={classes.root}>
           <CardHeader
             avatar={
@@ -147,7 +198,7 @@ export default function ProjectCards() {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={2} className={classes.cardGrid}>
+      <Grid item xs={12} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader
             avatar={
@@ -172,57 +223,6 @@ export default function ProjectCards() {
             <Typography variant="body2" component="p">
               I took a youth drumset and built it into a suitcase. For music on the go, 
               don't forget your SuitCaseDrumset!
-            </Typography>
-          </CardContent>
-          {/* <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions> */}
-        </Card>
-      </Grid>
-      <Grid item xs={2} className={classes.cardGrid}>
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                T-B
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="Trithir Bot"
-            subheader="April 2021"
-          />
-          <CardActionArea href='https://github.com/Trithir/TrithirBot'>
-            <CardMedia
-              className={classes.media}
-              image={TrithirBot}
-              title="TrithirBot"
-            />
-          </CardActionArea>
-          <CardContent>
-            <Typography variant="body2" component="p">
-              Trithir-bot is built on an existing basic request bot. Users
-              have the ability to add songs to a streamer's playlist using simple commands. 
-              Expanded the search function. Added a counter for dropped
-              drumsticks.    
             </Typography>
           </CardContent>
           {/* <CardActions disableSpacing>
@@ -275,5 +275,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardGrid: {
     padding: theme.spacing(1),
+
   },
 }));

@@ -26,12 +26,12 @@ export default function TemporaryDrawer() {
   };
 
   const list = (anchor) => (
-    <div className={classes.bg} 
+    <div  
     >
       <div
         className={clsx(classes.list, {
           [classes.topList]: anchor === 'top',
-          [classes.bottomList]: anchor === 'bottom',
+          [classes.bottomList]: anchor === 'right',
         })}
         role="presentation"
         // onClick={toggleDrawer(anchor, false)}
@@ -54,11 +54,11 @@ export default function TemporaryDrawer() {
         <FancyTimeline />
         : ''
         }
-        {state.right ?
+        {state.bottom ?
         <CustomizedTimeline />
         : ''
         }
-        {state.bottom ? 
+        {state.right ? 
         <ProjectCards /> 
         : ''
         }
@@ -71,7 +71,7 @@ export default function TemporaryDrawer() {
     <div>
         <React.Fragment key='left'>
           <Button color='primary' onClick={toggleDrawer('left', true)}>Timeline</Button>
-          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} overflow='hidden' BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}} >
+          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }} PaperProps={{className:'bg', style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('left')}  
           </Drawer>
           {/* <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
@@ -82,9 +82,9 @@ export default function TemporaryDrawer() {
           <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('top')}  
           </Drawer>
-          <Button color='primary' onClick={toggleDrawer('bottom', true)}>Projects</Button>
-          <Drawer anchor='bottom' open={state['bottom']} onClose={toggleDrawer('bottom', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
-            {list('bottom')}  
+          <Button color='primary' onClick={toggleDrawer('right', true)}>Projects</Button>
+          <Drawer anchor='right' open={state['right']} onClose={toggleDrawer('right', false)} BackdropProps={{ invisible: true }} PaperProps={{className:'bg', style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
+            {list('right')}  
           </Drawer>
         </React.Fragment>
     </div> 
@@ -110,6 +110,10 @@ const useStyles = makeStyles({
   bg: {
     // backgroundColor: "#1a1126",
     overflow: 'auto',
+    // msOverflowStyle: 'none',
+    // webkitScrollbar: {
+    //   width: '0px'
+    // },
     scrollbarColor: 'transparent transparent',
   },
   about:{
