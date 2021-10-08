@@ -5,6 +5,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
+import Link from '@mui/material/Link';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
@@ -19,6 +20,7 @@ import SuitCaseDrums from './images/SuitCaseDrums.jpg'
 import Nexus from './images/Nexus.png'
 import TrithirBot from './images/TrithirBot.png'
 import { CardActionArea } from '@material-ui/core';
+import TriHabit_Icon from './images/TriHabit_Icon.png'
 
 export default function ProjectCards() {
   const classes = useStyles();
@@ -30,6 +32,60 @@ export default function ProjectCards() {
 
   return (
     <Grid container direction='column'>
+      <Grid item xs={12} className={classes.cardGrid}>
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                TH
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="TriHabits"
+            subheader="Oct 2021"
+          />
+          <CardActionArea href='https://github.com/Trithir/ActiMap'>
+            <CardMedia
+              className={classes.media}
+              image={TriHabit_Icon}
+              title="TriHabits"
+            />
+          </CardActionArea>
+          <CardContent>
+            <Typography variant="body2" component="p">
+              Built from the ground up with React Native and the Native Base library, this 
+              smartphone app aids users in setting goals (habits) and tracking them. 
+              Users can define new habits, set the frequency they want habits to appear, 
+              and track their habit progress in an embedded calendar component. 
+            </Typography>
+            <Link href="https://play.google.com/store/apps/details?id=com.trithir.TriHabits" underline="none">
+              Link to TriHabits
+            </Link>
+          </CardContent>
+          {/* <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+              <ShareIcon />
+            </IconButton>
+            <IconButton
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded,
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label="show more"
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          </CardActions> */}
+        </Card>
+      </Grid>
       <Grid item xs={12} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader
@@ -106,8 +162,7 @@ export default function ProjectCards() {
             <Typography variant="body2" component="p">
               Trithir Bot is built on an existing Twitch request bot written in TypeScript. Users
               have the ability to add songs to a streamer's playlist using simple commands. 
-              Expanded the search function. Added a counter for dropped
-              drumsticks.    
+              Expanded the search function, added counters, chat confirmations, and more!
             </Typography>
           </CardContent>
           {/* <CardActions disableSpacing>

@@ -9,12 +9,13 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^v4.11.1 ",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "*",
     "@material-ui/styles": "^4.11.4",
+    "@mui/material": "^5.0.3",
     "konva": "^8.0.4",
     "react": "latest",
     "react-dom": "latest",
