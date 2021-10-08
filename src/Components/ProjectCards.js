@@ -66,24 +66,6 @@ export default function ProjectCards() {
               Link to TriHabits
             </Link>
           </CardContent>
-          {/* <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions> */}
         </Card>
       </Grid>
       <Grid item xs={12} className={classes.cardGrid}>
@@ -115,24 +97,6 @@ export default function ProjectCards() {
               the Nexus. A react based web server, where mages can create and share spells that render in a 3D world!
             </Typography>
           </CardContent>
-          {/* <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions> */}
         </Card>
       </Grid>
       <Grid item xs={12} className={classes.cardGrid}>
@@ -165,55 +129,8 @@ export default function ProjectCards() {
               Expanded the search function, added counters, chat confirmations, and more!
             </Typography>
           </CardContent>
-          {/* <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions> */}
         </Card>
       </Grid>
-      {/* <Grid item xs={2} className={classes.cardGrid}>    
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                A
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="Activity Map"
-            subheader="May 2021"
-          />
-          <CardMedia
-            className={classes.media}
-            image="map"
-            title="Activity map"
-          />
-          <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-              An app to log hiking and other outdoor activities. Sort your activities by length,
-              duration, frequency of visits, and more!
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid> */}
       <Grid item xs={12} className={classes.cardGrid}>    
         <Card className={classes.root}>
           <CardHeader
@@ -280,24 +197,6 @@ export default function ProjectCards() {
               don't forget your SuitCaseDrumset!
             </Typography>
           </CardContent>
-          {/* <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions> */}
         </Card>
       </Grid>
 

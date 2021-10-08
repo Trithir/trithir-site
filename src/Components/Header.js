@@ -9,6 +9,37 @@ import TemporaryDrawer from './dashboard/NewDash';
 import TrithirLogo256 from './images/TrithirLogo256.png';
 
 
+
+const Header = () => {
+  const classes = useStyles();
+  return (
+    <Box className={classes.typedContainer}>
+      <Grid container justify="center">
+        <Avatar className={classes.avatar} src={TrithirLogo256} alt="Eric Stevens" />
+      </Grid>
+      <Typography className={classes.title} variant="h4">
+        <Typed strings={["The Eric Stevens"]} typeSpeed={40} />
+      </Typography>
+      <Typography className={classes.subtitle} variant="h5">
+        <Typed
+          strings={[
+            "Frontend Developer",
+            "Backend Developer",
+            "Music Player",
+            "Awesome Duder",
+          ]}
+          typeSpeed={40}
+          backSpeed={50}
+          loop
+          />
+      </Typography>
+      <TemporaryDrawer />
+    </Box>
+  );
+};
+
+export default Header;
+
 const useStyles = makeStyles((theme) => ({
   avatar: {
     width: theme.spacing(15),
@@ -32,33 +63,3 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
   },
 }));
-
-const Header = () => {
-  const classes = useStyles();
-  return (
-    <Box className={classes.typedContainer}>
-      <Grid container justify="center">
-        <Avatar className={classes.avatar} src={TrithirLogo256} alt="Eric Stevens" />
-      </Grid>
-      <Typography className={classes.title} variant="h4">
-        <Typed strings={["The Eric Stevens"]} typeSpeed={40} />
-      </Typography>
-      <Typography className={classes.subtitle} variant="h5">
-        <Typed
-          strings={[
-            "Frontend Developer",
-            "Backend Developer",
-            "Music Player",
-            "Awesome Duder",
-          ]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-        />
-      </Typography>
-      <TemporaryDrawer />
-    </Box>
-  );
-};
-
-export default Header;

@@ -12,7 +12,7 @@ return (
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
-    date="2021 - present"
+    date="Feb-July 2021"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}
   >
