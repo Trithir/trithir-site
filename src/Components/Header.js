@@ -25,6 +25,8 @@ const Header = () => {
           strings={[
             "Frontend Developer",
             "Backend Developer",
+            "Mobile Developer",
+            "Unreal Developer",
             "Music Player",
             "Awesome Duder",
           ]}

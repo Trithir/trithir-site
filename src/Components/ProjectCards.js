@@ -18,6 +18,7 @@ import TickToe from './dashboard/TickToe'
 import BizzFuzz from './BizzFuzz';
 import SuitCaseDrums from './images/SuitCaseDrums.jpg'
 import Nexus from './images/Nexus.png'
+import Flipbloq from './images/Flipbloq.png'
 import TrithirBot from './images/TrithirBot.png'
 import { CardActionArea } from '@material-ui/core';
 import TriHabit_Icon from './images/TriHabit_Icon.png'
@@ -32,6 +33,39 @@ export default function ProjectCards() {
 
   return (
     <Grid container direction='column'>
+      <Grid item xs={12} className={classes.cardGrid}>
+        <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                Fbq
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="Flipbloq"
+            subheader="Oct 2021"
+          />
+          <CardActionArea href="https://trithir.itch.io/flipbloq">
+            <CardMedia
+              className={classes.media}
+              image={Flipbloq}
+              title="Flipbloq"
+            />
+          </CardActionArea>
+          <CardContent>
+            <Typography variant="body2" component="p">
+              An ever evoloving puzzle game developed in Unreal Engine 4. I started with a basic idea and followed a video for setting up a simple game. It has been constantly snowballing out from there. Each layer complete with its own set of fun development challenges to decipher! 
+            </Typography>
+            <Link href="https://trithir.itch.io/flipbloq" underline="none">
+              Link to try the early development of Flipbloq.
+            </Link>
+          </CardContent>
+        </Card>
+      </Grid>
       <Grid item xs={12} className={classes.cardGrid}>
         <Card className={classes.root}>
           <CardHeader

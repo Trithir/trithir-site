@@ -40,7 +40,7 @@ export default function TemporaryDrawer() {
         {state.top ? 
         <>
         <Typography className={classes.about}>
-            Hello there! As far back as my memory goes, I've been curious about how things worked, and interested in fixing or improving upon them.
+            Hello there! As far back as my memory goes, I've been curious about how things worked and interested in fixing or improving upon them.
           Growing up I built/disassembled/fixed anything and everything, limited only by a lack of finances or resources. By the time I 
           finished high school I had my eyes set on the automotive field. Off and on for the next 10 years I worked towards being a technician,
           but discovered it wasn't what I wanted. Making my way through a second round of college, I took some programming classes that re-ignited
