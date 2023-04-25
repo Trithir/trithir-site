@@ -4,14 +4,11 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Link from '@mui/material/Link';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
 import TickToe from './dashboard/TickToe'
@@ -22,6 +19,7 @@ import Flipbloq from './images/Flipbloq.png'
 import TrithirBot from './images/TrithirBot.png'
 import { CardActionArea } from '@material-ui/core';
 import TriHabit_Icon from './images/TriHabit_Icon.png'
+import DraginBoard from './images/DraginBoard.png'
 
 export default function ProjectCards() {
   const classes = useStyles();
@@ -34,6 +32,37 @@ export default function ProjectCards() {
   return (
     <Grid container direction='column'>
       <Grid item xs={12} className={classes.cardGrid}>
+      <Card className={classes.root}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="recipe" className={classes.avatar}>
+                Dgn
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title="DraginBoard"
+            subheader="Apr 2022"
+          />
+          <CardActionArea href="https://DraginBoard.net">
+            <CardMedia
+              className={classes.media}
+              image={DraginBoard}
+              title="Flipbloq"
+            />
+          </CardActionArea>
+          <CardContent>
+            <Typography variant="body2" component="p">
+              Organize your ideas and projects with DraginBoard. A simple and intuitive drag and drop interface with using a standalone desktop application. 
+            </Typography>
+            <Link href="https://DraginBoard.net" underline="none">
+              Start organizing now!
+            </Link>
+          </CardContent>
+        </Card>
         <Card className={classes.root}>
           <CardHeader
             avatar={

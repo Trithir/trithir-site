@@ -9,6 +9,21 @@ export default function FancyTimeline() {
   
 return (
 <VerticalTimeline>
+
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
+    date="Mar 2022 - Mar 2023"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    icon={<WorkIcon />}
+  >
+    <h3 className="vertical-timeline-element-title">Software Developer</h3>
+    <h4 className="vertical-timeline-element-subtitle">Kitsap County, Wa</h4>
+    <p>
+      Helped develop and debug a Unity app and eventually used AWS Appstream to port it to a browser.
+    </p>
+  </VerticalTimelineElement>
+
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{background: 'rgba(0, 0, 0, 0)'}}

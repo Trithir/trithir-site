@@ -4,10 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import { createMuiTheme } from '@material-ui/core/styles';
-import CustomizedTimeline from '../MTimeline';
 import Typography from '@material-ui/core/Typography';
 import FancyTimeline from '../OTimeline';
 import ProjectCards from '../ProjectCards';
+import DoughnutChart from './Doughnut';
 
 export default function TemporaryDrawer() {
   const classes = useStyles();
@@ -55,7 +55,7 @@ export default function TemporaryDrawer() {
         : ''
         }
         {state.bottom ?
-        <CustomizedTimeline />
+        <DoughnutChart />
         : ''
         }
         {state.right ? 
@@ -74,10 +74,10 @@ export default function TemporaryDrawer() {
           <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }} PaperProps={{className:'bg', style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('left')}  
           </Drawer>
-          {/* <Button color='primary' onClick={toggleDrawer('right', true)}>AltTimeline</Button>
-          <Drawer anchor='right' open={state['right']} onClose={toggleDrawer('right', false)} BackdropProps={{ invisible: true }}>
-            {list('right')}  
-          </Drawer> */}
+          <Button color='primary' onClick={toggleDrawer('bottom', true)}>DoughnutChart</Button>
+          <Drawer anchor='bottom' open={state['bottom']} onClose={toggleDrawer('bottom', false)} BackdropProps={{ invisible: true }}>
+            {list('bottom')}  
+          </Drawer>
           <Button color='primary' onClick={toggleDrawer('top', true)}>About Me</Button>
           <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('top')}  
