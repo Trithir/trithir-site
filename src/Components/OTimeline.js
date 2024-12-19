@@ -13,6 +13,20 @@ return (
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
     contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
+    date="June 2023 - Dec 2024"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    icon={<WorkIcon />}
+  >
+    <h3 className="vertical-timeline-element-title">Bachelors Degree</h3>
+    <h4 className="vertical-timeline-element-subtitle">WGU</h4>
+    <p>
+      Worked through an accellerated program to earn a Bachelors in Computer Science.
+    </p>
+  </VerticalTimelineElement>
+
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{background: 'rgba(0, 0, 0, 0)'}}
     date="Mar 2022 - Mar 2023"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<WorkIcon />}

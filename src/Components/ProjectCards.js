@@ -11,14 +11,10 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
-import TickToe from './dashboard/TickToe'
-import BizzFuzz from './BizzFuzz';
-import SuitCaseDrums from './images/SuitCaseDrums.jpg'
 import Nexus from './images/Nexus.png'
 import Flipbloq from './images/Flipbloq.png'
 import TrithirBot from './images/TrithirBot.png'
 import { CardActionArea } from '@material-ui/core';
-import TriHabit_Icon from './images/TriHabit_Icon.png'
 import DraginBoard from './images/DraginBoard.png'
 
 export default function ProjectCards() {
@@ -99,42 +95,6 @@ export default function ProjectCards() {
         <Card className={classes.root}>
           <CardHeader
             avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                TH
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="TriHabits"
-            subheader="Oct 2021"
-          />
-          <CardActionArea href='https://github.com/Trithir/ActiMap'>
-            <CardMedia
-              className={classes.media}
-              image={TriHabit_Icon}
-              title="TriHabits"
-            />
-          </CardActionArea>
-          <CardContent>
-            <Typography variant="body2" component="p">
-              Built from the ground up with React Native and the Native Base library, this 
-              smartphone app aids users in setting goals (habits) and tracking them. 
-              Users can define new habits, set the frequency they want habits to appear, 
-              and track their habit progress in an embedded calendar component. 
-            </Typography>
-            <Link href="https://play.google.com/store/apps/details?id=com.trithir.TriHabits" underline="none">
-              Link to TriHabits
-            </Link>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item xs={12} className={classes.cardGrid}>
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
               <Avatar aria-label="Codespells Nexus" className={classes.avatar}>
                 C
               </Avatar>
@@ -190,74 +150,6 @@ export default function ProjectCards() {
               Trithir Bot is built on an existing Twitch request bot written in TypeScript. Users
               have the ability to add songs to a streamer's playlist using simple commands. 
               Expanded the search function, added counters, chat confirmations, and more!
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item xs={12} className={classes.cardGrid}>    
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="Tic Toe" className={classes.avatar}>
-                T
-              </Avatar>
-            }
-            title="Tic Tac Toe"
-            subheader="May 2021"
-            subheaderColor="#E57C12"
-          />
-          <CardContent>
-            <TickToe />
-            <Typography variant="body2" component="p">
-              React game of Tic Tac Toe. Records the steps so you can see where things went wrong!
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item xs={12} className={classes.cardGrid}>    
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                B
-              </Avatar>
-            }
-            title="BizzFuzz"
-            subheader="May 2021"
-          />
-          <CardContent>
-            <BizzFuzz />
-            <Typography variant="body2" component="p">
-              Had some fun altering a "Hello world" setup of Bizz Fuzz to use some React-y stuff. 
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item xs={12} className={classes.cardGrid}>
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                D
-              </Avatar>
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title="Suitcase Drumset"
-            subheader="May 2021"
-          />
-          <CardMedia
-            className={classes.media}
-            image={SuitCaseDrums}
-            title="Suitcase Drums"
-          />
-          <CardContent>
-            <Typography variant="body2" component="p">
-              I took a youth drumset and built it into a suitcase. For music on the go, 
-              don't forget your SuitCaseDrumset!
             </Typography>
           </CardContent>
         </Card>

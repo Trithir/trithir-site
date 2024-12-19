@@ -74,10 +74,10 @@ export default function TemporaryDrawer() {
           <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)} BackdropProps={{ invisible: true }} PaperProps={{className:'bg', style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('left')}  
           </Drawer>
-          <Button color='primary' onClick={toggleDrawer('bottom', true)}>DoughnutChart</Button>
+          {/* <Button color='primary' onClick={toggleDrawer('bottom', true)}>DoughnutChart</Button>
           <Drawer anchor='bottom' open={state['bottom']} onClose={toggleDrawer('bottom', false)} BackdropProps={{ invisible: true }}>
             {list('bottom')}  
-          </Drawer>
+          </Drawer> */}
           <Button color='primary' onClick={toggleDrawer('top', true)}>About Me</Button>
           <Drawer anchor='top' open={state['top']} onClose={toggleDrawer('top', false)} BackdropProps={{ invisible: true }} PaperProps={{style: {backgroundColor:"rgba(0, 0, 0, 0)", boxShadow:"none"}}}>
             {list('top')}  

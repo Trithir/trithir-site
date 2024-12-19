@@ -23,6 +23,7 @@ const Header = () => {
       <Typography className={classes.subtitle} variant="h5">
         <Typed
           strings={[
+            "Bachelors - Computer Science",
             "Frontend Developer",
             "Backend Developer",
             "Mobile Developer",
