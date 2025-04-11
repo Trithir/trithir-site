@@ -1,0 +1,1 @@
+console.log("Node version used in npm script:", process.version);
