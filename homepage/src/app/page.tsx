@@ -1,19 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import PathSelector from "../../components/pathselector";
-import { motion, useInView } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function Home() {
   const [path, setPath] = useState<"artifacts" | "projects" | null>(null);
   const [state, handleSubmit] = useForm("xeoanqvy");
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
-  // Debugging: Log path change
-  console.log("Selected path:", path);
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans scroll-smooth">
@@ -48,7 +42,7 @@ export default function Home() {
           height={100}
         />
         <h1 className="text-3xl sm:text-4xl font-bold text-orange-400">
-          Welcome to Trithir’s Workshop
+          Welcome to Trithir&rsquo;s Workshop
         </h1>
         <p className="max-w-xl text-sm sm:text-base text-white/80">
           Purveyor of peculiar pieces and mystical makings. Browse the gallery
@@ -57,15 +51,13 @@ export default function Home() {
       </section>
 
       {/* Path Selector */}
-      {/* <section className="py-6 px-4 bg-black/[.05]" id="gallery">
+      <section className="py-6 px-4 bg-black/[.05]" id="gallery">
         <PathSelector onSelect={setPath} selectedPath={path} />
-      </section> */}
+      </section>
 
       {/* Toggling Content (Artifacts for Sale or Enchanted Products) */}
       {path && (
-        <section
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8"
-        >
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
@@ -74,8 +66,8 @@ export default function Home() {
               <div className="aspect-square bg-black/20 rounded mb-2" />
               <h3 className="font-semibold text-lg">
                 {path === "artifacts"
-                  ? `Artifact #${i + 1}`
-                  : `Product #${i + 1}`}
+                  ? `Product #${i + 1}`
+                  : `Artifact #${i + 1}`}
               </h3>
               <p className="text-sm text-white/70">
                 A mysterious creation with unknown powers.
@@ -93,7 +85,8 @@ export default function Home() {
         <p className="text-white/80">
           Trithir is a humble crafts-wizard conjuring up hand-turned pens,
           puzzle boxes, cloaks, and curious creations from wood and whimsy.
-          Email him with enquiries Ericstevens10@gmail.com or simply use the form below.
+          Email him with enquiries Ericstevens10@gmail.com or simply use the
+          form below.
         </p>
       </section>
 
@@ -156,7 +149,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-6 text-center text-xs text-white/50">
-        &copy; {new Date().getFullYear()} Trithir's Workshop. All rights
+        &copy; {new Date().getFullYear()} Trithir&rsquo;s Workshop. All rights
         reserved.
       </footer>
     </div>

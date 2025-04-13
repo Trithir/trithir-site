@@ -4,8 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-type Path = "crafter" | "scribe";
-
 interface PathSelectorProps {
   onSelect: (path: "artifacts" | "projects") => void;
   selectedPath: "artifacts" | "projects" | null;
