@@ -58,7 +58,7 @@ export default function Home() {
       {/* Toggling Content (Artifacts for Sale or Enchanted Products) */}
       {path && (
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             <div
               key={i}
               className="bg-white/5 border border-white/[.1] rounded-xl p-4 shadow-md hover:shadow-lg transition"
