@@ -4,10 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import PathSelector from "../../components/pathselector";
 import { useForm, ValidationError } from "@formspree/react";
+import { products } from "../../lib/products";
+import { Product } from "../../types";
+import ProductCard from "../../components/productcard";
+import ProductOverlay from "../../components/productoverlay";
 
 export default function Home() {
   const [path, setPath] = useState<"artifacts" | "projects" | null>(null);
   const [state, handleSubmit] = useForm("xeoanqvy");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const filtered = products.filter((product) =>
+    path === "artifacts"
+      ? product.status === "for-sale"
+      : product.status === "sold"
+  );
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans scroll-smooth">
@@ -58,21 +69,12 @@ export default function Home() {
       {/* Toggling Content (Artifacts for Sale or Enchanted Products) */}
       {path && (
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
-          {[...Array(2)].map((_, i) => (
-            <div
-              key={i}
-              className="bg-white/5 border border-white/[.1] rounded-xl p-4 shadow-md hover:shadow-lg transition"
-            >
-              <div className="aspect-square bg-black/20 rounded mb-2" />
-              <h3 className="font-semibold text-lg">
-                {path === "artifacts"
-                  ? `Product #${i + 1}`
-                  : `Artifact #${i + 1}`}
-              </h3>
-              <p className="text-sm text-white/70">
-                A mysterious creation with unknown powers.
-              </p>
-            </div>
+          {filtered.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={() => setSelectedProduct(product)}
+            />
           ))}
         </section>
       )}
@@ -152,6 +154,13 @@ export default function Home() {
         &copy; {new Date().getFullYear()} Trithir&rsquo;s Workshop. All rights
         reserved.
       </footer>
+
+      {selectedProduct && (
+        <ProductOverlay
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </div>
   );
 }

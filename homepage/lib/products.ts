@@ -1,4 +1,6 @@
-import { Product } from './types'
+import { Product } from '../types'
+
+// status: for-sale | sold
 
 export const products: Product[] = [
   {

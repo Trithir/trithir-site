@@ -52,7 +52,7 @@ export default function PathSelector({
                 : "bg-orange-600 text-white hover:bg-orange-700"
             }`}
         >
-          Enchanted Projects
+          Enchanted Relics
         </button>
       </div>
 
