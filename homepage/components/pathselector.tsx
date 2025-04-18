@@ -16,15 +16,17 @@ export default function PathSelector({
   const [showPuff, setShowPuff] = useState(false);
 
   const handleSelect = (path: "artifacts" | "projects") => {
+    if (selectedPath === path) return; // Prevent unnecessary reruns
+
     setShowPuff(true);
     setTimeout(() => {
       onSelect(path);
-      setShowPuff(false);
       setTimeout(() => {
+        setShowPuff(false);
         document
           .getElementById(`${path}-section`)
           ?.scrollIntoView({ behavior: "smooth" });
-      }, 300);
+      }, 100); // Slight buffer to avoid flash
     }, 800);
   };
 
@@ -33,7 +35,9 @@ export default function PathSelector({
       {/* Buttons */}
       <div className="z-10 flex flex-col sm:flex-row gap-6">
         <button
+          type="button"
           onClick={() => handleSelect("artifacts")}
+          aria-pressed={selectedPath === "artifacts"}
           className={`px-6 py-3 text-lg rounded-full transition-all shadow-md
             ${
               selectedPath === "artifacts"
@@ -44,7 +48,9 @@ export default function PathSelector({
           Artifacts for Sale
         </button>
         <button
+          type="button"
           onClick={() => handleSelect("projects")}
+          aria-pressed={selectedPath === "projects"}
           className={`px-6 py-3 text-lg rounded-full transition-all shadow-md
             ${
               selectedPath === "projects"
@@ -63,17 +69,18 @@ export default function PathSelector({
             key="puff"
             initial={{ opacity: 0, scale: 1, y: 150 }}
             animate={{ opacity: 1, scale: 3, y: -150 }}
-            exit={{ opacity: 0, scale: 1.5, y: 100 }}
+            exit={{ opacity: 0, scale: 3, y: 100 }}
             transition={{
               duration: 0.6,
               ease: "easeOut",
               opacity: { duration: 0.4 },
             }}
             className="fixed bottom-0 left-1/2 -translate-x-7/10 z-40 pointer-events-none w-full flex justify-center"
+            aria-hidden="true"
           >
             <Image
               src="/mistyfog.png"
-              alt="Magic puff"
+              alt=""
               width={1920}
               height={700}
               priority

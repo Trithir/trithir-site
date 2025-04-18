@@ -23,11 +23,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans scroll-smooth">
       {/* Sticky Nav */}
-      <nav className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur border-b border-white/[.1] px-6 py-4 flex justify-between items-center">
+      <nav
+        aria-label="Main navigation"
+        className="sticky top-0 z-50 w-full bg-background/90 backdrop-blur border-b border-white/[.1] px-6 py-4 flex justify-between items-center"
+      >
         <span className="text-lg font-bold text-orange-400">Trithir</span>
-        <ul className="flex gap-6 text-sm sm:text-base">
-          <li>
-            <a href="#gallery" className="hover:text-purple-400">
+        <ul className="flex gap-6 text-sm sm:text-base" role="menubar">
+          <li role="none">
+            <a
+              role="menuitem"
+              href="#gallery"
+              className="hover:text-purple-400"
+            >
               Gallery
             </a>
           </li>
@@ -36,8 +43,12 @@ export default function Home() {
               About
             </a>
           </li> */}
-          <li>
-            <a href="#contact" className="hover:text-purple-400">
+          <li role="none">
+            <a
+              role="menuitem"
+              href="#contact"
+              className="hover:text-purple-400"
+            >
               Contact
             </a>
           </li>
@@ -45,14 +56,20 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center text-center gap-4 py-8 px-4">
+      <section
+        className="flex flex-col items-center text-center gap-4 py-8 px-4"
+        aria-labelledby="hero-heading"
+      >
         <Image
           src="/TrithirLogo.png"
           alt="Trithir logo"
           width={100}
           height={100}
         />
-        <h1 className="text-3xl sm:text-4xl font-bold text-orange-400">
+        <h1
+          id="hero-heading"
+          className="text-3xl sm:text-4xl font-bold text-orange-400"
+        >
           Welcome to Trithir&rsquo;s Workshop
         </h1>
         <p className="max-w-xl text-sm sm:text-base text-white/80">
@@ -62,13 +79,24 @@ export default function Home() {
       </section>
 
       {/* Path Selector */}
-      <section className="py-6 px-4 bg-black/[.05]" id="gallery">
+      <section
+        className="py-6 px-4 bg-black/[.05]"
+        id="gallery"
+        aria-label="Gallery section"
+      >
         <PathSelector onSelect={setPath} selectedPath={path} />
       </section>
 
       {/* Toggling Content (Artifacts for Sale or Enchanted Products) */}
       {path && (
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+        <section
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8"
+          aria-label={
+            path === "artifacts"
+              ? "Artifacts for sale"
+              : "Completed enchanted projects"
+          }
+        >
           {filtered.map((product) => (
             <ProductCard
               key={product.id}
@@ -79,9 +107,16 @@ export default function Home() {
         </section>
       )}
 
-      {/* About Section (Always Visible) */}
-      <section className="p-8 sm:p-16 max-w-2xl mx-auto text-center" id="about">
-        <h2 className="text-2xl font-semibold mb-4 text-purple-300">
+      {/* About Section */}
+      <section
+        className="p-8 sm:p-16 max-w-2xl mx-auto text-center"
+        id="about"
+        aria-labelledby="about-heading"
+      >
+        <h2
+          id="about-heading"
+          className="text-2xl font-semibold mb-4 text-purple-300"
+        >
           About the Maker
         </h2>
         <p className="text-white/80">
@@ -92,18 +127,39 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Contact Section (Always Visible) */}
-      <section className="p-8 sm:p-16 max-w-xl mx-auto" id="contact">
-        <h2 className="text-2xl font-semibold mb-4 text-orange-300">
+      {/* Contact Section */}
+      <section
+        className="p-8 sm:p-16 max-w-xl mx-auto"
+        id="contact"
+        aria-labelledby="contact-heading"
+      >
+        <h2
+          id="contact-heading"
+          className="text-2xl font-semibold mb-4 text-orange-300"
+        >
           Send a Message
         </h2>
 
         {state.succeeded ? (
-          <p className="text-green-400 font-medium text-center">
+          <p
+            className="text-green-400 font-medium text-center"
+            role="status"
+            aria-live="polite"
+          >
             Thanks for your message!
           </p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4"
+            aria-describedby="form-description"
+          >
+            <span id="form-description" className="sr-only">
+              Fill in your name, email, and message to contact Trithir.
+            </span>
+            <label htmlFor="name" className="sr-only">
+              Name
+            </label>
             <input
               id="name"
               type="text"
@@ -112,6 +168,9 @@ export default function Home() {
               className="bg-black/10 border border-white/[.1] rounded p-2"
               required
             />
+            <label htmlFor="email" className="sr-only">
+              Email
+            </label>
             <input
               id="email"
               type="email"
@@ -125,6 +184,9 @@ export default function Home() {
               field="email"
               errors={state.errors}
             />
+            <label htmlFor="message" className="sr-only">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
@@ -142,6 +204,7 @@ export default function Home() {
               type="submit"
               disabled={state.submitting}
               className="bg-purple-700 text-white py-2 rounded hover:bg-purple-800 transition"
+              aria-label="Submit contact form"
             >
               {state.submitting ? "Sending..." : "Cast Message"}
             </button>
@@ -150,7 +213,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 text-center text-xs text-white/50">
+      <footer
+        className="py-6 text-center text-xs text-white/50"
+        role="contentinfo"
+      >
         &copy; {new Date().getFullYear()} Trithir&rsquo;s Workshop. All rights
         reserved.
       </footer>
