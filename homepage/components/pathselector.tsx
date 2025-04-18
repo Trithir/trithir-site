@@ -61,22 +61,23 @@ export default function PathSelector({
         {showPuff && (
           <motion.div
             key="puff"
-            initial={{ opacity: 0, scale: 0.5, y: 100 }}
-            animate={{ opacity: 1, scale: 3.5, y: 0 }}
-            exit={{ opacity: 0, scale: 3, y: 0 }}
+            initial={{ opacity: 0, scale: 1, y: 150 }}
+            animate={{ opacity: 1, scale: 3, y: -150 }}
+            exit={{ opacity: 0, scale: 1.5, y: 100 }}
             transition={{
               duration: 0.6,
               ease: "easeOut",
-              opacity: { duration: 0.2 }, // this line fades it sooner
+              opacity: { duration: 0.4 },
             }}
-            className="fixed bottom-0 left-1/2 -translate-x-1/2 z-40 pointer-events-none"
+            className="fixed bottom-0 left-1/2 -translate-x-7/10 z-40 pointer-events-none w-full flex justify-center"
           >
             <Image
-              src="/puff.png"
+              src="/mistyfog.png"
               alt="Magic puff"
-              width={480}
-              height={480}
+              width={1920}
+              height={700}
               priority
+              className="w-full max-w-screen"
             />
           </motion.div>
         )}

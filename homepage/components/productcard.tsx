@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Product } from '../types';
+import { useState } from "react";
+import { Product } from "../types";
 
 interface Props {
   product: Product;
@@ -11,6 +11,7 @@ interface Props {
 export default function ProductCard({ product }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const openOverlay = () => {
     setExpanded(true);
@@ -26,7 +27,9 @@ export default function ProductCard({ product }: Props) {
 
   const showPrevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+    setImageIndex(
+      (prev) => (prev - 1 + product.images.length) % product.images.length
+    );
   };
 
   return (
@@ -39,18 +42,28 @@ export default function ProductCard({ product }: Props) {
           className="aspect-square bg-black/20 rounded mb-2"
           style={{
             backgroundImage: `url(${product.images[0]})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
         <h3 className="font-semibold text-lg mb-1">{product.title}</h3>
-        <p className="text-sm text-white/70 mb-2">{product.description.slice(0, 100)}...</p>
+        <p
+          className="text-sm text-white/70 mb-2 cursor-pointer"
+          onClick={(e) => {
+            e.stopPropagation(); // prevent modal from opening
+            setShowFullDescription(!showFullDescription);
+          }}
+        >
+          {showFullDescription
+            ? product.description
+            : `${product.description.slice(0, 100)}...`}
+        </p>
         <p className="font-semibold text-white mb-2">{product.price}</p>
         {product.link && (
           <button
             onClick={(e) => {
               e.stopPropagation();
-              window.open(product.link, '_blank');
+              window.open(product.link, "_blank");
             }}
             className="mt-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded"
           >
@@ -68,6 +81,8 @@ export default function ProductCard({ product }: Props) {
             className="relative max-w-screen-md w-full p-4"
             onClick={(e) => e.stopPropagation()}
           >
+            <p className="text-white mb-4 text-center">{product.description}</p>
+
             {/* Image Display */}
             <img
               src={product.images[imageIndex]}
