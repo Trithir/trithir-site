@@ -68,7 +68,7 @@ export default function PathSelector({
           <motion.div
             key="puff"
             initial={{ opacity: 0, scale: 1, y: 150 }}
-            animate={{ opacity: 1, scale: 3, y: -150 }}
+            animate={{ opacity: .96, scale: 3, y: -150 }}
             exit={{ opacity: 0, scale: 3, y: 100 }}
             transition={{
               duration: 0.6,
